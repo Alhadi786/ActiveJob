@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/movieListFragment">
+
+    <fragment
+        android:id="@+id/movieListFragment"
+        tools:layout="@layout/fragment_movie_list"
+        android:name="com.xee.app.activejob.movie.fragment.MovieListFragment"
+        android:label="MovieListFragment" >
+
+        <action
+            app:popEnterAnim="@anim/slide_in_left_new"
+            app:popExitAnim="@anim/slide_out_right_new"
+            app:enterAnim="@anim/slide_in_right_new"
+            app:exitAnim="@anim/slide_out_left_new"
+            android:id="@+id/action_movieListFragment_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment">
+            <argument
+                android:name="movie"
+                app:argType="com.xee.app.activejob.model.Search"/>
+            <argument
+                android:name="action"
+                app:argType="string"/>
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailFragment"
+        tools:layout="@layout/fragment_movie_detail"
+        android:name="com.xee.app.activejob.movie.fragment.MovieDetailFragment"
+        android:label="MovieDetailFragment" >
+        <argument
+            android:name="movie"
+            app:argType="com.xee.app.activejob.model.Search"/>
+        <argument
+            android:name="action"
+            app:argType="string"/>
+    </fragment>
+</navigation>
