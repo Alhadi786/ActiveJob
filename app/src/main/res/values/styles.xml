@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Heading">
+    <style name="BoldBlack">
         <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">@dimen/_18ssp</item>
-        <item name="android:fontFamily">@font/merriweather_sans_extra_bold</item>
+        <item name="android:textSize">@dimen/_15ssp</item>
+        <item name="android:fontFamily">@font/merriweather_sans_bold</item>
 
-    </style><style name="NormalText">
-        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="NormalBack">
+        <item name="android:textColor">@color/black</item>
         <item name="android:textSize">@dimen/_12ssp</item>
         <item name="android:fontFamily">@font/merriweather_sans_medium</item>
     </style>
+
+    <style name="LightBack">
+        <item name="android:textColor">@color/colorBlackLight</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:fontFamily">@font/merriweather_sans_regular</item>
+    </style>
+
+
 </resources>

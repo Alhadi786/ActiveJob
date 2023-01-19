@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit
 
 class RetrofitClient {
     object ServiceBuilder {
-        fun <T> buildService(apiInterface: Class<T>, apiKeyInterceptor: ApiKeyInterceptor): T {
+        fun <T> buildService(apiInterface: Class<T>): T {
             val interceptor = HttpLoggingInterceptor()
             if (BuildConfig.DEBUG)
                 interceptor.level = HttpLoggingInterceptor.Level.BODY
@@ -23,7 +23,6 @@ class RetrofitClient {
                 .callTimeout(30, TimeUnit.SECONDS)
                 .connectTimeout(30, TimeUnit.SECONDS)
                 .addInterceptor(interceptor)
-                .addInterceptor(apiKeyInterceptor)
                 .build()
 
 
