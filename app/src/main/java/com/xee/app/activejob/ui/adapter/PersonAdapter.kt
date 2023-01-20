@@ -36,7 +36,7 @@ class PersonAdapter(
             binding.apply {
                 val userName = "${item.name.first} ${item.name.last}"
                 textViewName.text = userName
-                textViewCountry.text = item.location.country
+                textViewCountry.text = "${item.location.country} (${item.distance}) km away"
                 textViewEmail.text = item.email
                 imageViewPerson.loadImage(item.picture.large)
             }
