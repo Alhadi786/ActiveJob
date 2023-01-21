@@ -2,5 +2,5 @@
     <string name="app_name">ActiveJob</string>
     <string name="movie_title">Movie Title</string>
     <string name="movie_year">Year</string>
-    <string name="no_person_found_under_4000km_distance">No Person found under 4000km distance</string>
+    <string name="no_person_found_under_4000km_distance">No Person found under 100KM distance</string>
 </resources>

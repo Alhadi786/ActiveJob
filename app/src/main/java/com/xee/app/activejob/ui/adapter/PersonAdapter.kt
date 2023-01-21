@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.xee.app.activejob.databinding.ItemPeronBinding
 import com.xee.app.activejob.model.Person
 import com.xee.app.activejob.uitils.loadImage
+import com.xee.app.activejob.uitils.roundOff
 
 
 class PersonAdapter(
@@ -36,7 +37,7 @@ class PersonAdapter(
             binding.apply {
                 val userName = "${item.name.first} ${item.name.last}"
                 textViewName.text = userName
-                textViewCountry.text = "${item.location.country} (${item.distance}) km away"
+                textViewCountry.text = "${item.location.country} (${item.distance.roundOff()}) km away"
                 textViewEmail.text = item.email
                 imageViewPerson.loadImage(item.picture.large)
             }

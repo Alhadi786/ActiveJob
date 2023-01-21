@@ -76,4 +76,5 @@ dependencies {
     implementation "com.google.android.gms:play-services-location:21.0.1"
     implementation 'com.afollestad.assent:core:3.0.0-RC4'
     implementation 'com.facebook.shimmer:shimmer:0.1.0@aar'
+    implementation 'com.google.android.gms:play-services-maps:15.0.1'
 }

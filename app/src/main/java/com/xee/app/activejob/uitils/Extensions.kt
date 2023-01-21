@@ -10,6 +10,8 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.async
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
+import java.math.RoundingMode
+import java.text.DecimalFormat
 import java.util.*
 
 fun ImageView.loadImage(
@@ -51,3 +53,8 @@ fun Location.distanceBetween(latitude: Double, longitude: Double): Float {
     return this.distanceTo(location) / 1000
 }
 
+fun Float.roundOff():Float{
+    val df = DecimalFormat("#.##")
+    df.roundingMode = RoundingMode.CEILING
+    return df.format(this).toFloat()
+}

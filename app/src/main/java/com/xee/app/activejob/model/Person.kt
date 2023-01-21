@@ -24,7 +24,7 @@ data class Person(
     fun checkIfNearBy(currentLocation: android.location.Location): Boolean {
 
          distance = currentLocation.distanceBetween(location.coordinates.latitude , location.coordinates.longitude)
-        if (distance < 4000)
+        if (distance < 1000)
             return true
 
         return false
